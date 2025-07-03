@@ -21,7 +21,7 @@ const labTestsData = [
   },
 
    {
-    testName:"Glucose",
+    testName:"Bs",
     tubeType: "لوله بیوشیمی",
     normalRange: "70-110 mg/dL (fasting)",
   },
@@ -51,7 +51,7 @@ const labTestsData = [
     normalRange: "",
   },
     {
-    testName:"RENIN",
+    testName:"Renin",
     tubeType: "cbcروی یخ",
     normalRange: "",
   },
@@ -61,13 +61,13 @@ const labTestsData = [
     normalRange: "",
   },
     {
-    testName:"",
-    tubeType: "",
+    testName:"Pro-c",
+    tubeType: "PT",
     normalRange: "",
   },
     {
-    testName:"",
-    tubeType: "",
+    testName:"ارگانیک اسید ادرار",
+    tubeType: "10cc ادرار - 4 بار کد 803530",
     normalRange: "",
   },
     {

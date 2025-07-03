@@ -36,9 +36,9 @@ export default function LabSearchApp() {
                 <p>
                   <strong>نوع لوله:</strong> {test.tubeType}
                 </p>
-                <p>
+                {test.normalRange && <p>
                   <strong>رنج طبیعی:</strong> {test.normalRange}
-                </p>
+                </p>}
               </div>
             ))
           ) : (
