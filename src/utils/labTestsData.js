@@ -117,7 +117,12 @@ const labTestsData = [
   },
   {
     testName: "Homocysteine ",
-    tubeType: "لوله cbc",
+    tubeType: "لوله cbc روی یخ",
+    normalRange: "",
+  },
+   {
+    testName: "Lactat ",
+    tubeType: "لوله cbc روی یخ",
     normalRange: "",
   },
   {
