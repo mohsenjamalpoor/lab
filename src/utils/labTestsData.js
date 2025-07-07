@@ -7,7 +7,7 @@ const labTestsData = [
   {
     testName: "Ammonia",
     tubeType: "cbc روی یخ",
-    normalRange: "WBC: 4-10, RBC: 4.5-5.9, HGB: 13-17",
+    normalRange: "",
   },
   {
     testName: "Na",
@@ -17,7 +17,7 @@ const labTestsData = [
   {
     testName: "K",
     tubeType: "لوله بیوشیمی",
-    normalRange: "WBC: 4-10, RBC: 4.5-5.9, HGB: 13-17",
+    normalRange: "",
   },
 
   {
@@ -52,16 +52,21 @@ const labTestsData = [
   },
   {
     testName: "Renin",
-    tubeType: "لوله cbc",
+    tubeType: "cbc روی یخ ",
     normalRange: "",
   },
   {
-    testName: "Cyclosporine",
+    testName: "Cyclosporine(ساندیمان)",
     tubeType: "cbcروی یخ",
     normalRange: "",
   },
   {
-    testName: "Pro-c",
+    testName: "Protein c",
+    tubeType: "PT",
+    normalRange: "",
+  },
+   {
+    testName: "Protein s",
     tubeType: "PT",
     normalRange: "",
   },
@@ -117,243 +122,130 @@ const labTestsData = [
   },
   {
     testName: "Homocysteine ",
-    tubeType: "لوله cbc روی یخ",
+    tubeType: "cbc",
     normalRange: "",
   },
    {
-    testName: "Lactat ",
-    tubeType: "لوله cbc روی یخ",
+    testName: "Lactate",
+    tubeType: " cbc روی یخ",
+    normalRange: "",
+  },
+   {
+    testName: "Fibrinogen",
+    tubeType: "PT",
+    normalRange: "",
+  },
+   {
+    testName: "Anti thrombin lll",
+    tubeType: "PT",
+    normalRange: "",
+  },
+   {
+    testName: "Factor v Leidon",
+    tubeType: "PT",
+    normalRange: "",
+  },
+   {
+    testName: "اتانول- متانول",
+    tubeType: "PT",
+    normalRange: "",
+  },
+   {
+    testName: "Factor H/B/I",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "G6PD",
+    tubeType: "cbc",
+    normalRange: "",
+  },
+    {
+    testName: "Hb Electrophoresis",
+    tubeType: "cbc",
+    normalRange: "",
+  },
+    {
+    testName: "Pyruvate",
+    tubeType: "داخل لوله شیشه ای مخصوص از آزمایشگاه تهیه می شود",
+    normalRange: "",
+  },
+    {
+    testName: "HB A1C",
+    tubeType: "cbc",
+    normalRange: "",
+  },
+    {
+    testName: "ACTH",
+    tubeType: "cbc روی یخ",
+    normalRange: "",
+  },
+    {
+    testName: "NBT",
+    tubeType: "cbc",
+    normalRange: "",
+  },
+    {
+    testName: "CMV Ag",
+    tubeType: "cbc",
+    normalRange: "",
+  },
+    {
+    testName: "سیرولیموس(راپامیون)",
+    tubeType: "cbc",
+    normalRange: "",
+  },
+    {
+    testName: "PBS",
+    tubeType: "cbc",
+    normalRange: "",
+  },
+    {
+    testName: "Amylase",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+    {
+    testName: "B1- تیامین",
+    tubeType: "cbc",
+    normalRange: "",
+  },
+    {
+    testName: "G6PD",
+    tubeType: "cbc",
     normalRange: "",
   },
   {
-    testName: "",
-    tubeType: "",
+    testName: "Lipase",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },{
+    testName: "GAMA GT",
+    tubeType: "لوله بیوشیمی",
     normalRange: "",
   },
   {
-    testName: "",
-    tubeType: "",
+    testName: "GTT",
+    tubeType: "لوله بیوشیمی",
     normalRange: "",
   },
   {
-    testName: "",
-    tubeType: "",
+    testName: "LDH",
+    tubeType: "لوله بیوشیمی",
     normalRange: "",
   },
   {
-    testName: "",
-    tubeType: "",
+    testName: "CPK",
+    tubeType: "لوله بیوشیمی",
     normalRange: "",
   },
-  {
-    testName: "",
-    tubeType: "",
+   {
+    testName: "Dir.Coombs",
+    tubeType: "cbc",
     normalRange: "",
   },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
-  {
-    testName: "",
-    tubeType: "",
-    normalRange: "",
-  },
+ 
+  
+
 ];
 export default labTestsData;
