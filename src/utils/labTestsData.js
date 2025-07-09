@@ -80,6 +80,51 @@ const labTestsData = [
     tubeType: "لوله بیوشیمی",
     normalRange: "",
   },
+    {
+    testName: "Cr",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+    {
+    testName: "BUN",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+    {
+    testName: "CPK",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+    {
+    testName: "RF",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+    {
+    testName: "VDRL",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+    {
+    testName: "Wright",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+    {
+    testName: "WIDAL",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+    {
+    testName: "Cold agglutinin",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+    {
+    testName: "Coombs wright",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
   {
     testName: "Ca",
     tubeType: "لوله بیوشیمی",
@@ -92,6 +137,16 @@ const labTestsData = [
   },
     {
     testName:"Ph",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName:"SGOT",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName:"SGPT",
     tubeType: "لوله بیوشیمی",
     normalRange: "",
   },
@@ -364,6 +419,201 @@ const labTestsData = [
     tubeType: "لوله بیوشیمی",
     normalRange: "",
   },
+    {
+    testName: "K-F",
+    tubeType: "مایعات بدن",
+    normalRange: "",
+  },
+   {
+    testName: "LDH-F",
+    tubeType: "مایعات بدن",
+    normalRange: "",
+  },
+   {
+    testName: "Amylase-F",
+    tubeType: "مایعات بدن",
+    normalRange: "",
+  },
+   {
+    testName: "Albumin-F",
+    tubeType: "مایعات بدن",
+    normalRange: "",
+  },
+   {
+    testName: "ALK-F",
+    tubeType: "مایعات بدن",
+    normalRange: "",
+  },
+   {
+    testName: "Bilirobin-F",
+    tubeType: "مایعات بدن",
+    normalRange: "",
+  },
+   {
+    testName: "BUN-F",
+    tubeType: "مایعات بدن",
+    normalRange: "",
+  },
+   {
+    testName: "Cholestrol-F",
+    tubeType: "مایعات بدن",
+    normalRange: "",
+  },
+   {
+    testName: "Cr-F",
+    tubeType: "مایعات بدن",
+    normalRange: "",
+  },
+  {
+    testName: "Glu-F",
+    tubeType: "مایعات بدن",
+    normalRange: "",
+  },
+   {
+    testName: "Glubulin-F",
+    tubeType: "مایعات بدن",
+    normalRange: "",
+  },
+   {
+    testName: "NA-F",
+    tubeType: "مایعات بدن",
+    normalRange: "",
+  },
+   {
+    testName: "Protein-F",
+    tubeType: "مایعات بدن",
+    normalRange: "",
+  },
+   {
+    testName: "Triglyceride-F",
+    tubeType: "مایعات بدن",
+    normalRange: "",
+  },
+   {
+    testName: "U/A",
+    tubeType: "2cc نمونه ادرار ",
+    normalRange: "",
+  },
+    {
+    testName: "U/C",
+    tubeType: "2cc نمونه ادرار ",
+    normalRange: "",
+  },
+   {
+    testName: "Urine SG",
+    tubeType: "2cc نمونه ادرار ",
+    normalRange: "",
+  },
+   {
+    testName: "Urine R.S",
+    tubeType: "2cc نمونه ادرار ",
+    normalRange: "",
+  },
+   {
+    testName: "Keton",
+    tubeType: "2cc نمونه ادرار ",
+    normalRange: "",
+  },
+   {
+    testName: "Urine protein",
+    tubeType: "2cc نمونه ادرار ",
+    normalRange: "",
+  },
+   {
+    testName: "Urine Glucose",
+    tubeType: "2cc نمونه ادرار ",
+    normalRange: "",
+  },
+   {
+    testName: "Phزیر پارافین",
+    tubeType: "2cc نمونه ادرار ",
+    normalRange: "",
+  },
+    {
+    testName: "CSFروتین",
+    tubeType: "مایع مغزی -نخاعی",
+    normalRange: "",
+  },
+    {
+    testName: "Pleural",
+    tubeType: "2cc نمونه داخل لوله شیشیه استریل ",
+    normalRange: "",
+  },
+    {
+    testName: "Asiteروتین",
+    tubeType: "2cc نمونه داخل لوله شیشیه استریل ",
+    normalRange: "",
+  },
+    {
+    testName: "Dialysisروتین",
+    tubeType: "نمونه مایع دیالیز استریل",
+    normalRange: "",
+  },
+    {
+    testName: "Borrelia-Malaria",
+    tubeType: "cbc",
+    normalRange: "",
+  },
+   {
+    testName: "ESR",
+    tubeType: "ESR-cbc",
+    normalRange: "",
+  },
+   {
+    testName:"S/E",
+    tubeType: "نمونه مدفوع",
+    normalRange: "",
+  },
+   {
+    testName:"S/c",
+    tubeType: "نمونه مدفوع",
+    normalRange: "",
+  },
+   {
+    testName:"Fat drop",
+    tubeType: "نمونه مدفوع",
+    normalRange: "",
+  },
+   {
+    testName:"OB",
+    tubeType: "نمونه مدفوع",
+    normalRange: "",
+  },
+   {
+    testName:"Ph stool",
+    tubeType: "نمونه مدفوع",
+    normalRange: "",
+  },
+   {
+    testName:"RS stool",
+    tubeType: "نمونه مدفوع",
+    normalRange: "",
+  },
+   {
+    testName:"Scotch test",
+    tubeType: "نمونه مدفوع",
+    normalRange: "",
+  },
+   {
+    testName:"Blood Group",
+    tubeType: "cbc",
+    normalRange: "",
+  },
+   {
+    testName:"TORCH",
+    tubeType: "5cc خون لخته   /   HSV(G/M) / CMV(G/M)  / Rubella(G/M) / Toxo(G/M)",
+    normalRange: "",
+  },
+    {
+    testName:"ANA(I.F)",
+    tubeType: "5cc خون لخته   /   P.ANCA  /  ANCA  /  C.ANCA  /  Anti RP3  /  Anti ds DNA   /  Anti MPO  /  ANA(I.F)",
+    normalRange: "",
+  },
+ 
+ 
+ 
+ 
+ 
  
 
 
