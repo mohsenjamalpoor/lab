@@ -40,7 +40,7 @@ const nursingDiagnosis = [
         description:"کاهش برون ده قلبی"
     },
      {
-        diagnosisName:"وضعیت روانی و عاعفی",
+        diagnosisName:"وضعیت روانی و عاطفی",
         description:"اضطراب و ترس"
     },
 ]

@@ -244,8 +244,128 @@ const labTestsData = [
     tubeType: "cbc",
     normalRange: "",
   },
+   {
+    testName: "Tacrolimus Level",
+    tubeType: "cbc",
+    normalRange: "",
+  },
+   {
+    testName: "Factor v PCR",
+    tubeType: "cbcدو عدد",
+    normalRange: "",
+  },
+   {
+    testName: "Amino acid blood HPLC/کروماتوگرافی اسید های امینه",
+    tubeType: "cbc",
+    normalRange: "",
+  },
+   {
+    testName: "PCR LP",
+    tubeType: "نمونه LP",
+    normalRange: "",
+  },
+   {
+    testName: "Urine amine TLC/Urine sugar TLC/کروماتوگرافی قندو یا اسید امینه ادرار",
+    tubeType: "10cc ادرار",
+    normalRange: "",
+  },
+   {
+    testName: "Protein electrophoresis",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "Adamts",
+    tubeType: "2 نمونهcbc/pt/بیوشیمی   Bun/Cr/cbc-diff/CD46/Retic/Adamts13/Anti Adamts13/FactorB/FactorH/Factor l",
+    normalRange: "",
+  },
+  {
+    testName: "FBS",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+    {
+    testName: "Direct bili",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+    {
+    testName: "Total bili",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+    {
+    testName: "Albumin",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+    {
+    testName: "TIBC",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+    {
+    testName: "CL",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "Uric acide",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "2HPP",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "Globulin",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "25 OH Vit D3",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "Ferritin",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "C3",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "C4",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "IgM/IgA/IgG",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "HIV",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "HCV Ag",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "HBS Ag",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
  
-  
+
 
 ];
 export default labTestsData;

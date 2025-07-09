@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { IoChevronBackCircle } from "react-icons/io5";
 
 import nursingDiagnosis from "../utils/nursingDiagnosis";
+import { useNavigate } from "react-router-dom";
 
 export default function NursingDiagnosis() {
+  const navigator = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredTests = nursingDiagnosis.filter((test) =>
@@ -10,7 +13,10 @@ export default function NursingDiagnosis() {
   );
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start p-8 bg-gray-50">
+    <div className="min-h-screen flex flex-col items-center justify-start p-8 bg-gray-50 relative">
+       <IoChevronBackCircle onClick={() => navigator(-1)}
+              className="absolute top-4 left-4 text-3xl text-blue-600 cursor-pointer hover:scale-105 transition-transform"
+            />
       <h1 className="text-2xl font-bold mb-4">جستجوی تشخیص پرستاری</h1>
 
       <input
