@@ -9,7 +9,7 @@ export default function HomePage() {
       <h1 className="text-2xl font-bold flex justify-center mb-5">راهنمای جامع پرستاری</h1>
       <div>
         <div className=" mr-2 flex items-center flex-row">
-         <FaFlask size={20} color="#4A90E2 mr-" />
+         <FaFlask size={20} color="text-[#4A90E2]" />
       <Link className="mr-1 text-[#366EBD] font-bold" to="/lab">آزمایشات</Link>  
 
         </div>
