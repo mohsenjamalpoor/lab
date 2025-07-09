@@ -1,18 +1,18 @@
 const nursingDiagnosis = [
     {
-        diagnosisName:" اختالالت سغح هوشیاری",
+        diagnosisName:" اختلالات سطح هوشیاری",
         description:"کاهش سطح هوشیاری"
     },
     {
-        diagnosisName:"اختالالت سیستم عصبی",
+        diagnosisName:"اختلالات سیستم عصبی",
         description:"کاهش سطح هوشیاری"
     },
     {
-        diagnosisName:"اختالالت تنفسی",
+        diagnosisName:"اختلالات تنفسی",
         description:"درد قفسه سینه"
     },
     {
-        diagnosisName:"اختالالت قلبی",
+        diagnosisName:"اختلالات قلبی",
         description:"خستگی"
     },
     {
@@ -20,7 +20,7 @@ const nursingDiagnosis = [
         description:"درد"
     },
      {
-        diagnosisName:" اختالالت هماتولوژیک",
+        diagnosisName:" اختلالات هماتولوژیک",
         description:"خستگی"
     },
      {
@@ -28,15 +28,15 @@ const nursingDiagnosis = [
         description:"احتمال پر فشاری خون"
     },
      {
-        diagnosisName:"اختالالت گوارشی",
+        diagnosisName:"اختلالات گوارشی",
         description:"اسهال"
     },
      {
-        diagnosisName:"اختالالت اسکلتی عضالنی",
+        diagnosisName:"اختلالات اسکلتی عضالنی",
         description:"درد استخوانی/مفاصل"
     },
      {
-        diagnosisName:"اختالالت عفونی",
+        diagnosisName:"اختلالات عفونی",
         description:"کاهش برون ده قلبی"
     },
      {

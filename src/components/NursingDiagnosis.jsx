@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-import nursingDiagnosis from '../utils/nursingDiagnosis';
+import nursingDiagnosis from "../utils/nursingDiagnosis";
 
-export default function NursingDiagnosis() {const [searchTerm, setSearchTerm] = useState("");
+export default function NursingDiagnosis() {
+  const [searchTerm, setSearchTerm] = useState("");
 
-  // فیلتر کردن تنها روی نام آزمایش‌ها
   const filteredTests = nursingDiagnosis.filter((test) =>
     test.diagnosisName.toLowerCase().includes(searchTerm.toLowerCase().trim())
   );
@@ -21,7 +21,6 @@ export default function NursingDiagnosis() {const [searchTerm, setSearchTerm] = 
         className="w-full max-w-md px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 mb-6"
       />
 
-      
       {searchTerm.trim() !== "" && (
         <div className="w-full max-w-md space-y-4">
           {filteredTests.length > 0 ? (
@@ -36,13 +35,10 @@ export default function NursingDiagnosis() {const [searchTerm, setSearchTerm] = 
                 <p>
                   <strong> توضیحات:</strong> {nurse.description}
                 </p>
-              
               </div>
             ))
           ) : (
-            <p className="text-gray-500">
-              هیچ آزمایشی با این نام یافت نشد.
-            </p>
+            <p className="text-gray-500">هیچ آزمایشی با این نام یافت نشد.</p>
           )}
         </div>
       )}
