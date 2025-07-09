@@ -1,12 +1,15 @@
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LabSearchApp from "./components/LabSearchApp";
-
-
-
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-   <LabSearchApp/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="lab" element={<LabSearchApp />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
