@@ -7,7 +7,7 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Header */}
+      
       <div className="flex justify-between items-center bg-gradient-to-r from-blue-600 to-cyan-400 p-4 rounded-xl shadow-md mb-8">
         <h1 className="text-2xl font-extrabold text-white">راهنمای جامع پرستاری</h1>
         <button
@@ -18,7 +18,7 @@ export default function HomePage() {
         </button>
       </div>
 
-      {/* Menu */}
+      
       {isOpen && (
         <div className="bg-white border rounded-lg shadow-md p-4 mb-5">
           <div className="mb-3 flex items-center">
