@@ -13,8 +13,6 @@ export default function NursingDiagnosis() {
     item.toLowerCase().includes(searchTerm.toLowerCase().trim())
   );
 
-  const closeModal = () => setSelectedDiagnosis(null);
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-start p-8 bg-gray-50 relative">
       <IoChevronBackCircle
@@ -54,7 +52,7 @@ export default function NursingDiagnosis() {
         <div className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl p-6 w-full max-w-lg text-right relative">
             <button
-              onClick={closeModal}
+              onClick={() => setSelectedDiagnosis(null)}
               className="absolute top-2 left-2 text-sm text-gray-500 bg-gray-200 rounded-full  hover:bg-gray-300"
             >
               <FiX size={20} />

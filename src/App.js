@@ -10,6 +10,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="lab" element={<LabSearchApp />} />
         <Route path="nursingdiagnosis" element={<NursingDiagnosis/>} />
+        
       </Routes>
     </BrowserRouter>
   );
