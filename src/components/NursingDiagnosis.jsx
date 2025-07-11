@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { IoChevronBackCircle } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
@@ -9,8 +8,6 @@ export default function NursingDiagnosis() {
   const navigator = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedDiagnosis, setSelectedDiagnosis] = useState(null);
-
- 
 
   const filteredDiagnosis = Object.keys(nursingDiagnosis).filter((item) =>
     item.toLowerCase().includes(searchTerm.toLowerCase().trim())
@@ -54,14 +51,8 @@ export default function NursingDiagnosis() {
       )}
 
       {selectedDiagnosis && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
-          onClick={closeModal}
-        >
-          <div
-            className="bg-white rounded-xl p-6 w-full max-w-lg text-right relative"
-            onClick={(e) => e.stopPropagation()}
-          >
+        <div className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-6 w-full max-w-lg text-right relative">
             <button
               onClick={closeModal}
               className="absolute top-2 left-2 text-sm text-gray-500 bg-gray-200 rounded-full  hover:bg-gray-300"
@@ -82,5 +73,3 @@ export default function NursingDiagnosis() {
     </div>
   );
 }
-
-
