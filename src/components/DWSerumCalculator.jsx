@@ -12,13 +12,18 @@ export default function DWSerumCalculator() {
     const vol = parseFloat(volume);
 
     if (!base || !target || !vol || base >= target) {
-      setResult("لطفاً اطلاعات معتبر وارد کنید (غلظت پایه باید کمتر از هدف باشد).");
+      setResult(
+        "لطفاً اطلاعات معتبر وارد کنید (غلظت پایه باید کمتر از هدف باشد)."
+      );
       return;
     }
 
-    
-    const serumVolume = ((target - base) * vol) / (50 - target); 
-    setResult(`${serumVolume.toFixed(2)} سی‌سی D50% به ${vol} سی‌سی سرم ${base}% اضافه شود.`);
+    const serumVolume = ((target - base) * vol) / 50;
+    setResult(
+      `${serumVolume.toFixed(
+        2
+      )} سی‌سی D50% به ${vol} سی‌سی سرم ${base}% اضافه شود.`
+    );
   };
 
   return (
@@ -50,6 +55,9 @@ export default function DWSerumCalculator() {
           <option value="7.5">7.5%</option>
           <option value="10">10%</option>
           <option value="12.5">12.5%</option>
+          <option value="15">15%</option>
+          <option value="17.5">17.5%</option>
+          <option value="20">20%</option>
         </select>
       </div>
 
