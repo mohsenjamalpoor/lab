@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FaFlask, FaClipboardList, FaBars } from 'react-icons/fa';
+import { FaFlask, FaClipboardList, FaBars, FaSyringe } from 'react-icons/fa';
 
 export default function HomePage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,6 +31,12 @@ export default function HomePage() {
             <FaClipboardList size={20} className="text-[#4A90E2] ml-2" />
             <Link className="text-[#366EBD] font-bold" to="/nursingdiagnosis">
               تشخیص های پرستاری
+            </Link>
+          </div>
+            <div className="flex items-center">
+            <FaSyringe size={20} className="text-[#4A90E2] ml-2" />
+            <Link className="text-[#366EBD] font-bold" to="/drip">
+              محاسبه دریپ
             </Link>
           </div>
         </div>
