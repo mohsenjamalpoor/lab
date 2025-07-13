@@ -1,15 +1,22 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { FaFlask, FaClipboardList, FaBars, FaSyringe } from 'react-icons/fa';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  FaFlask,
+  FaClipboardList,
+  FaBars,
+  FaSyringe,
+  FaNotesMedical,
+} from "react-icons/fa";
 
 export default function HomePage() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      
       <div className="flex justify-between items-center bg-gradient-to-r from-blue-600 to-cyan-400 p-4 rounded-xl shadow-md mb-8">
-        <h1 className="text-2xl font-extrabold text-white">راهنمای جامع پرستاری</h1>
+        <h1 className="text-2xl font-extrabold text-white">
+          راهنمای جامع پرستاری
+        </h1>
         <button
           className="text-white text-2xl focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
@@ -18,7 +25,6 @@ export default function HomePage() {
         </button>
       </div>
 
-      
       {isOpen && (
         <div className="bg-white border rounded-lg shadow-md p-4 mb-5">
           <div className="mb-3 flex items-center">
@@ -33,21 +39,20 @@ export default function HomePage() {
               تشخیص های پرستاری
             </Link>
           </div>
-            <div className="flex items-center">
-            <FaSyringe size={20} className="text-[#4A90E2] ml-2" />
+          <div className="flex items-center">
+            <FaNotesMedical size={20} className="text-[#4A90E2] ml-2" />
             <Link className="text-[#366EBD] font-bold" to="/drip">
               محاسبه دریپ
             </Link>
           </div>
           <div className="flex items-center mt-2">
-  <FaSyringe size={20} className="text-[#4A90E2] ml-2" />
-  <Link className="text-[#366EBD] font-bold" to="/dw-serum">
-    محاسبه سرم قندی
-  </Link>
-</div>
-
+            <FaSyringe size={20} className="text-[#4A90E2] ml-2" />
+            <Link className="text-[#366EBD] font-bold" to="/dw-serum">
+              محاسبه سرم قندی
+            </Link>
+          </div>
         </div>
       )}
     </>
-  )
+  );
 }
