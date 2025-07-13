@@ -48,6 +48,10 @@ export default function DripCalculator() {
     const calculate = calculators[drugType];
     if (calculate) {
       setResult(calculate());
+        setTotalVolume('');
+    setTotalMedical('');
+    setDoctorOrder('');
+    setAmpouleCount('1');
     } else {
       setResult('نوع دارو نامعتبر است.');
     }
