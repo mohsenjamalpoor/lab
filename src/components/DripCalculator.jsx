@@ -1,71 +1,85 @@
-
-import React, { useState } from 'react';
-import { IoChevronBackCircle } from 'react-icons/io5';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { IoChevronBackCircle } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const drugOptions = [
-  { name: 'داروی عمومی', value: 'general' },
-  { name: 'هپارین', value: 'heparin' },
-  { name: 'لابتولول', value: 'labetalol' },
-  { name: 'مانیتول', value: 'mannitol' },
-
-
+  { name: "داروی عمومی", value: "general" },
+  { name: "هپارین", value: "heparin" },
+  { name: "لابتولول", value: "labetalol" },
+  { name: "مانیتول", value: "mannitol" },
 ];
 
 export default function DripCalculator() {
   const navigator = useNavigate();
-  const [drugType, setDrugType] = useState('');
-  const [totalVolume, setTotalVolume] = useState('');
-  const [totalMedical, setTotalMedical] = useState('');
-  const [doctorOrder, setDoctorOrder] = useState('');
-  const [ampouleCount, setAmpouleCount] = useState('1');
+  const [drugType, setDrugType] = useState("");
+  const [totalVolume, setTotalVolume] = useState("");
+  const [totalMedical, setTotalMedical] = useState("");
+  const [doctorOrder, setDoctorOrder] = useState("");
+  const [ampouleCount, setAmpouleCount] = useState("1");
   const [result, setResult] = useState(null);
+  const formatRate = (value) => {
+    const num = parseFloat(value);
+    return Number.isInteger(num) ? num.toString() : num.toFixed(2);
+  };
 
   const calculators = {
     heparin: () => {
-      const divisor = ampouleCount === '1' ? 100 : 200;
+      const divisor = ampouleCount === "1" ? 100 : 200;
       const rate = parseFloat(doctorOrder) / divisor;
-      return ` سرعت تزریق هپارین: ml/hr ${rate.toFixed(2)} `;
+
+      return ` سرعت تزریق هپارین: ml/hr ${formatRate(rate)} `;
     },
 
     labetalol: () => {
       const rate = parseFloat(doctorOrder) / 5;
-      return `سرعت تزریق لابتولول: ml/hr ${rate.toFixed(2)} `;
+
+      return `سرعت تزریق لابتولول: ${formatRate(rate)} سی سی/ ساعت `;
     },
 
     mannitol: () => {
       const rate = parseFloat(doctorOrder) * 5;
-      return ` مانیتول:  ${rate.toFixed(2)} cc `;
+      return ` مانیتول:  ${formatRate(rate)} سی سی `;
     },
 
     general: () => {
-      const rate = (parseFloat(totalVolume) * parseFloat(doctorOrder)) / parseFloat(totalMedical);
-      return ` سرعت انفوزیون: ml/hr ${rate.toFixed(2)} `;
+      const rate =
+        (parseFloat(totalVolume) * parseFloat(doctorOrder)) /
+        parseFloat(totalMedical);
+      return ` سرعت انفوزیون: ml/hr ${formatRate(rate)} `;
     },
   };
 
   const calculateDripRate = () => {
-    if (!drugType || !doctorOrder || (drugType === 'general' && (!totalVolume || !totalMedical))) {
-      setResult('لطفا تمام فیلدها را پر کنید.');
+    if (
+      !drugType ||
+      !doctorOrder ||
+      (drugType === "general" && (!totalVolume || !totalMedical))
+    ) {
+      setResult("لطفا تمام فیلدها را پر کنید.");
       return;
     }
 
     const calculate = calculators[drugType];
     if (calculate) {
       setResult(calculate());
-   
+      //     setTotalVolume('');
+      // setTotalMedical('');
+      // setDoctorOrder('');
+      // setAmpouleCount('1');
     } else {
-      setResult('نوع دارو نامعتبر است.');
+      setResult("نوع دارو نامعتبر است.");
     }
   };
 
   return (
     <div className="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md mt-5">
-       <IoChevronBackCircle
-              onClick={() => navigator(-1)}
-              className="absolute top-4 left-4 text-3xl text-blue-600 cursor-pointer hover:scale-105 transition-transform"
-            />
-      <h2 className="text-xl font-bold mb-4 text-center text-blue-700">محاسبه سرعت انفوزیون</h2>
+      <IoChevronBackCircle
+        onClick={() => navigator(-1)}
+        className="absolute top-4 left-4 text-3xl text-blue-600 cursor-pointer hover:scale-105 transition-transform"
+      />
+      <h2 className="text-xl font-bold mb-4 text-center text-blue-700">
+        محاسبه سرعت انفوزیون
+      </h2>
 
       <div className="mb-4">
         <label className="block text-gray-700">نوع دارو:</label>
@@ -86,10 +100,12 @@ export default function DripCalculator() {
         </select>
       </div>
 
-      {drugType === 'heparin' && (
+      {drugType === "heparin" && (
         <>
           <div className="mb-4">
-            <label className="block text-gray-700">تعداد آمپول در ۵۰ سی‌سی:</label>
+            <label className="block text-gray-700">
+              تعداد آمپول در ۵۰ سی‌سی:
+            </label>
             <select
               className="w-full border rounded p-2 mt-1"
               value={ampouleCount}
@@ -101,7 +117,9 @@ export default function DripCalculator() {
           </div>
 
           <div className="mb-4">
-            <label className="block text-gray-700">دستور پزشک (واحد/kg/hr):</label>
+            <label className="block text-gray-700">
+              دستور پزشک (واحد/kg/hr):
+            </label>
             <input
               type="number"
               className="w-full border rounded p-2 mt-1"
@@ -112,7 +130,7 @@ export default function DripCalculator() {
         </>
       )}
 
-      {drugType === 'labetalol' && (
+      {drugType === "labetalol" && (
         <div className="mb-4">
           <label className="block text-gray-700">دستور پزشک (mg/min):</label>
           <input
@@ -123,7 +141,7 @@ export default function DripCalculator() {
           />
         </div>
       )}
-        {drugType === 'mannitol' && (
+      {drugType === "mannitol" && (
         <div className="mb-4">
           <label className="block text-gray-700">دستور پزشک (gr):</label>
           <input
@@ -135,9 +153,7 @@ export default function DripCalculator() {
         </div>
       )}
 
-     
-
-      {drugType === 'general' && (
+      {drugType === "general" && (
         <>
           <div className="mb-4">
             <label className="block text-gray-700">حجم محلول (ml):</label>
@@ -179,7 +195,9 @@ export default function DripCalculator() {
       </button>
 
       {result && (
-        <div className="mt-4 text-center font-semibold text-green-700">{result}</div>
+        <div className="mt-4 text-center font-semibold text-green-700">
+          {result}
+        </div>
       )}
     </div>
   );
