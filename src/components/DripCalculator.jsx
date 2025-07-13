@@ -5,7 +5,7 @@ const drugOptions = [
   { name: 'داروی عمومی', value: 'general' },
   { name: 'هپارین', value: 'heparin' },
   { name: 'لابتولول', value: 'labetalol' },
-  { name: 'نوراپی‌نفرین', value: 'norepinephrine' },
+
 ];
 
 export default function DripCalculator() {
@@ -28,10 +28,7 @@ export default function DripCalculator() {
       return ` سرعت تزریق لابتولول: ${rate.toFixed(2)} ml/hr`;
     },
 
-    norepinephrine: () => {
-      const rate = (parseFloat(doctorOrder) * 60 * parseFloat(totalVolume)) / parseFloat(totalMedical);
-      return ` سرعت تزریق نوراپی‌نفرین: ${rate.toFixed(2)} ml/hr`;
-    },
+   
 
     general: () => {
       const rate = (parseFloat(totalVolume) * parseFloat(doctorOrder)) / parseFloat(totalMedical);
@@ -51,7 +48,7 @@ export default function DripCalculator() {
         setTotalVolume('');
     setTotalMedical('');
     setDoctorOrder('');
-    setAmpouleCount('1');
+    setAmpouleCount('1'); 
     } else {
       setResult('نوع دارو نامعتبر است.');
     }
@@ -118,39 +115,7 @@ export default function DripCalculator() {
         </div>
       )}
 
-      {drugType === 'norepinephrine' && (
-        <>
-          <div className="mb-4">
-            <label className="block text-gray-700">حجم محلول (ml):</label>
-            <input
-              type="number"
-              className="w-full border rounded p-2 mt-1"
-              value={totalVolume}
-              onChange={(e) => setTotalVolume(e.target.value)}
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-gray-700">کل دارو (mcg):</label>
-            <input
-              type="number"
-              className="w-full border rounded p-2 mt-1"
-              value={totalMedical}
-              onChange={(e) => setTotalMedical(e.target.value)}
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-gray-700">دستور پزشک (mcg/min):</label>
-            <input
-              type="number"
-              className="w-full border rounded p-2 mt-1"
-              value={doctorOrder}
-              onChange={(e) => setDoctorOrder(e.target.value)}
-            />
-          </div>
-        </>
-      )}
+     
 
       {drugType === 'general' && (
         <>
