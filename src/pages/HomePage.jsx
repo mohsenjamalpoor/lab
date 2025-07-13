@@ -27,7 +27,7 @@ export default function HomePage() {
               آزمایشات
             </Link>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center mb-2">
             <FaClipboardList size={20} className="text-[#4A90E2] ml-2" />
             <Link className="text-[#366EBD] font-bold" to="/nursingdiagnosis">
               تشخیص های پرستاری
