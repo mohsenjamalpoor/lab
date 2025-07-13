@@ -22,7 +22,7 @@ export default function DWSerumCalculator() {
     setResult(
       `${serumVolume.toFixed(
         2
-      )} سی‌سی D50% به ${vol} سی‌سی سرم ${base}% اضافه شود.`
+      )} سی‌سی D50% به ${vol} سی‌سی سرم ${base}% اضافه شود.تا به   ${target}% بدست آید.`
     );
   };
 
