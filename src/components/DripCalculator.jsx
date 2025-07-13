@@ -72,7 +72,7 @@ export default function DripCalculator() {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md mt-5">
+    <div className="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md mt-5 relative">
       <IoChevronBackCircle
         onClick={() => navigator(-1)}
         className="absolute top-4 left-4 text-3xl text-blue-600 cursor-pointer hover:scale-105 transition-transform"
