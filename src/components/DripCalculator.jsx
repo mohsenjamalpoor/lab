@@ -52,7 +52,8 @@ export default function DripCalculator() {
 
     const calculate = calculators[drugType];
     if (calculate) {
-  
+      setResult(calculate());
+   
     } else {
       setResult('نوع دارو نامعتبر است.');
     }
