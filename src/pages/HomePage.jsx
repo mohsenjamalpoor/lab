@@ -39,6 +39,13 @@ export default function HomePage() {
               محاسبه دریپ
             </Link>
           </div>
+          <div className="flex items-center mt-2">
+  <FaSyringe size={20} className="text-[#4A90E2] ml-2" />
+  <Link className="text-[#366EBD] font-bold" to="/dw-serum">
+    محاسبه سرم قندی
+  </Link>
+</div>
+
         </div>
       )}
     </>

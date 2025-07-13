@@ -3,6 +3,7 @@ import LabSearchApp from "./components/LabSearchApp";
 import HomePage from "./pages/HomePage";
 import NursingDiagnosis from "./components/NursingDiagnosis";
 import DripCalculator from "./components/DripCalculator";
+import DWSerumCalculator from "./components/DWSerumCalculator";
 
 function App() {
   return (
@@ -10,11 +11,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="lab" element={<LabSearchApp />} />
-        <Route path="nursingdiagnosis" element={<NursingDiagnosis/>} />
-        <Route path="drip" element={<DripCalculator/>} />
-
-        
-        
+        <Route path="nursingdiagnosis" element={<NursingDiagnosis />} />
+        <Route path="drip" element={<DripCalculator />} />
+        <Route path="/dw-serum" element={<DWSerumCalculator />} />
       </Routes>
     </BrowserRouter>
   );

@@ -21,7 +21,7 @@ export default function DripCalculator() {
     const num = parseFloat(value);
     return Number.isInteger(num) ? num.toString() : num.toFixed(2);
   };
-
+ 
   const calculators = {
     heparin: () => {
       const divisor = ampouleCount === "1" ? 100 : 200;
@@ -132,7 +132,7 @@ export default function DripCalculator() {
 
       {drugType === "labetalol" && (
         <div className="mb-4">
-          <label className="block text-gray-700">دستور پزشک (mg/min):</label>
+          <label className="block text-gray-700">دستور پزشک (mg/hr):</label>
           <input
             type="number"
             className="w-full border rounded p-2 mt-1"
