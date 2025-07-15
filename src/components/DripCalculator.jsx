@@ -156,7 +156,7 @@ export default function DripCalculator() {
           </div>
 
           <div className="mb-4">
-            <label className="block text-gray-700">حجم محلول (ml):</label>
+            <label className="block text-gray-700">حجم محلول (ml):(serum N/S)</label>
             <input
               type="number"
               className="w-full border rounded p-2 mt-1"
