@@ -8,6 +8,7 @@ const drugOptions = [
   { name: "لابتولول", value: "labetalol" },
   { name: "مانیتول", value: "mannitol" },
   { name: "انسولین", value: "insulin" },
+  { name: "NaCl 3%", value: "nacl3" },
 ];
 
 export default function DripCalculator() {
@@ -30,6 +31,19 @@ export default function DripCalculator() {
       const divisor = ampouleCount === "1" ? 100 : 200;
       const rate = parseFloat(doctorOrder) / divisor;
       return `سرعت تزریق هپارین: ${formatRate(rate)} ml/hr`;
+    },
+    nacl3: () => {
+      const totalVolumeNum = parseFloat(totalVolume);
+      if (isNaN(totalVolumeNum) || totalVolumeNum <= 0)
+        return "حجم نامعتبر است.";
+
+      const ratio = totalVolumeNum / 10;
+      const nacl5Volume = ratio * 6;
+      const waterVolume = ratio * 4;
+
+      return `برای تهیه ${formatRate(totalVolumeNum)} سی‌سی NaCl 3%:\n
+   مقدار NaCl 5% مورد نیاز: ${formatRate(nacl5Volume)} سی‌سی\n
+    مقدار آب مقطر مورد نیاز: ${formatRate(waterVolume)} سی‌سی`;
     },
 
     labetalol: () => {
@@ -75,8 +89,7 @@ export default function DripCalculator() {
       (drugType === "heparin" && !doctorOrder) ||
       (drugType === "labetalol" && !doctorOrder) ||
       (drugType === "mannitol" && !doctorOrder) ||
-      (drugType === "insulin" &&
-        (!weightKg || !totalVolume || !totalMedical));
+      (drugType === "insulin" && (!weightKg || !totalVolume || !totalMedical));
 
     if (commonFieldsMissing) {
       setResult("لطفا تمام فیلدها را پر کنید.");
@@ -101,7 +114,6 @@ export default function DripCalculator() {
         محاسبه سرعت انفوزیون
       </h2>
 
-    
       <div className="mb-4">
         <label className="block text-gray-700">نوع دارو:</label>
         <select
@@ -155,11 +167,12 @@ export default function DripCalculator() {
         </>
       )}
 
-      
       {drugType === "heparin" && (
         <>
           <div className="mb-4">
-            <label className="block text-gray-700">تعداد آمپول در ۵۰ سی‌سی:</label>
+            <label className="block text-gray-700">
+              تعداد آمپول در ۵۰ سی‌سی:
+            </label>
             <select
               className="w-full border rounded p-2 mt-1"
               value={ampouleCount}
@@ -171,7 +184,9 @@ export default function DripCalculator() {
           </div>
 
           <div className="mb-4">
-            <label className="block text-gray-700">دستور پزشک (واحد/kg/hr):</label>
+            <label className="block text-gray-700">
+              دستور پزشک (واحد/kg/hr):
+            </label>
             <input
               type="number"
               className="w-full border rounded p-2 mt-1"
@@ -181,8 +196,18 @@ export default function DripCalculator() {
           </div>
         </>
       )}
+      {drugType === "nacl3" && (
+        <div className="mb-4">
+          <label className="block text-gray-700">حجم نهایی محلول (ml):</label>
+          <input
+            type="number"
+            className="w-full border rounded p-2 mt-1"
+            value={totalVolume}
+            onChange={(e) => setTotalVolume(e.target.value)}
+          />
+        </div>
+      )}
 
-      
       {drugType === "labetalol" && (
         <div className="mb-4">
           <label className="block text-gray-700">دستور پزشک (mg/hr):</label>
@@ -195,7 +220,6 @@ export default function DripCalculator() {
         </div>
       )}
 
-      
       {drugType === "mannitol" && (
         <div className="mb-4">
           <label className="block text-gray-700">دستور پزشک (gr):</label>
@@ -208,7 +232,6 @@ export default function DripCalculator() {
         </div>
       )}
 
-     
       {drugType === "general" && (
         <>
           <div className="mb-4">
