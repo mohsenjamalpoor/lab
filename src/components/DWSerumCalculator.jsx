@@ -42,6 +42,9 @@ export default function DWSerumCalculator() {
           <option value="5">5%</option>
           <option value="7.5">7.5%</option>
           <option value="10">10%</option>
+           <option value="12.5">12.5%</option>
+          <option value="15">15%</option>
+          <option value="17.5">17.5%</option>
         </select>
       </div>
 
