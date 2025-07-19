@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import LabSearchApp from "./components/LabSearchApp";
 import HomePage from "./pages/HomePage";
 import NursingDiagnosis from "./components/NursingDiagnosis";
@@ -15,8 +15,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/home" element={<HomePage />} />
+      <Route path="/" element={<Navigate to="/login" />} />
+  <Route path="/login" element={<LoginPage />} />
+  <Route path="/home" element={<HomePage />} />
         <Route path="lab" element={<LabSearchApp />} />
         <Route path="nursingdiagnosis" element={<NursingDiagnosis />} />
         <Route path="drip" element={<DripCalculator />} />

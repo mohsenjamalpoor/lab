@@ -19,20 +19,31 @@ useEffect(() => {
     navigate("/login");
   }
 }, []);
+const handleLogout = () => {
+  localStorage.removeItem("loggedIn");
+  navigate("/login");
+};
 
   return (
     <>
-      <div className="flex justify-between items-center bg-gradient-to-r from-blue-600 to-cyan-400 p-4 rounded-xl shadow-md mb-8">
-        <h1 className="text-2xl font-extrabold text-white">
-          راهنمای جامع پرستاری
-        </h1>
-        <button
-          className="text-white text-2xl focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <FaBars />
-        </button>
-      </div>
+    <div className="flex justify-between items-center bg-gradient-to-r from-blue-600 to-cyan-400 p-4 rounded-xl shadow-md mb-8">
+  <h1 className="text-2xl font-extrabold text-white">راهنمای جامع پرستاری</h1>
+  <div className="flex gap-4 items-center">
+    <button
+      className="text-white text-xl border border-white px-3 py-1 rounded hover:bg-white hover:text-blue-600 transition"
+      onClick={handleLogout}
+    >
+      خروج
+    </button>
+    <button
+      className="text-white text-2xl focus:outline-none"
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <FaBars />
+    </button>
+  </div>
+</div>
+
 
       {isOpen && (
         <div className="bg-white border rounded-lg shadow-md p-4 mb-5">
@@ -74,6 +85,7 @@ useEffect(() => {
             </Link>
           </div> */}
         </div>
+        
       )}
     </>
   );
