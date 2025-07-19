@@ -1,15 +1,24 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   FaFlask,
   FaClipboardList,
   FaBars,
   FaSyringe,
   FaNotesMedical,
+  FaHeart, // آیکون جدید نوار قلب
 } from "react-icons/fa";
 
 export default function HomePage() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+useEffect(() => {
+  const isLoggedIn = localStorage.getItem("loggedIn");
+  if (!isLoggedIn) {
+    navigate("/login");
+  }
+}, []);
 
   return (
     <>
@@ -39,18 +48,31 @@ export default function HomePage() {
               تشخیص های پرستاری
             </Link>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center mb-2">
             <FaNotesMedical size={20} className="text-[#4A90E2] ml-2" />
             <Link className="text-[#366EBD] font-bold" to="/drip">
               محاسبه دریپ
             </Link>
           </div>
-          <div className="flex items-center mt-2">
+          <div className="flex items-center mb-2">
             <FaSyringe size={20} className="text-[#4A90E2] ml-2" />
             <Link className="text-[#366EBD] font-bold" to="/dw-serum">
               محاسبه سرم قندی
             </Link>
           </div>
+         
+          {/* <div className="flex items-center">
+            <FaHeart size={20} className="text-[#4A90E2] ml-2" />
+            <Link className="text-[#366EBD] font-bold" to="/rhythm">
+              نوار قلب
+            </Link>
+          </div>
+           <div className="flex items-center">
+            <FaHeart size={20} className="text-[#4A90E2] ml-2" />
+            <Link className="text-[#366EBD] font-bold" to="/ecg-calculator">
+               محاسبه ضربان قلب
+            </Link>
+          </div> */}
         </div>
       )}
     </>
