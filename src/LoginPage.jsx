@@ -17,7 +17,7 @@ export default function LoginPage() {
     }
 
     // فرض می‌کنیم فقط یک کد ملی معتبر داریم (مثلاً برای تست)
-    const validCodes = ["1870105321", "1111111111"];
+    const validCodes = ["1212121212", "1111111111"];
 
     if (validCodes.includes(nationalCode)) {
    

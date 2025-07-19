@@ -6,7 +6,7 @@ export const rhythms = [
     type: "نرمال",
     description: "ریتم طبیعی با موج P و فاصله PR نرمال.",
     bpmRange: "60-100",
-    image: "/images/sinus.png.jpg",
+    image: "/images/sinus.jpg",
   },
   {
     id: "sinus-bradycardia",
@@ -14,7 +14,7 @@ export const rhythms = [
     type: "نرمال",
     description: "ضربان کمتر از 60 در دقیقه.",
     bpmRange: "<60",
-    image: "/images/sinus-bradycardia.png.jpg",
+    image: "/images/sinus-bradycardia.jpg",
   },
   {
     id: "sinus-tachycardia",
@@ -22,7 +22,7 @@ export const rhythms = [
     type: "نرمال",
     description: "ضربان بیش از 100 در دقیقه.",
     bpmRange: ">100",
-    image: "/images/sinus-tachycardia.png.jpg",
+    image: "/images/sinus-tachycardia.jpg",
   },
   {
     id: "sinus-arrhythmia",
@@ -40,7 +40,7 @@ export const rhythms = [
     type: "دهلیزی",
     description: "ریتم نامنظم با غیبت موج P مشخص.",
     bpmRange: "متغیر",
-    image: "/images/afib.png",
+    image: "/images/afib.jpg",
   },
   {
     id: "aflutter",
@@ -48,7 +48,7 @@ export const rhythms = [
     type: "دهلیزی",
     description: "موج‌های f شبیه اره، ریتم منظم.",
     bpmRange: "250-350",
-    image: "/images/aflutter.png",
+    image: "/images/aflutter.jpg",
   },
   {
     id: "pac",
@@ -100,7 +100,7 @@ export const rhythms = [
     type: "بطنی",
     description: "سه یا بیشتر PVC متوالی، خطرناک.",
     bpmRange: ">100",
-    image: "/images/vtach.png",
+    image: "/images/vtach.jpg",
   },
   {
     id: "vfib",
