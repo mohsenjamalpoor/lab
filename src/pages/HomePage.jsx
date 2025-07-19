@@ -27,10 +27,11 @@ const handleLogout = () => {
   return (
     <>
     <div className="flex justify-between items-center bg-gradient-to-r from-blue-600 to-cyan-400 p-4 rounded-xl shadow-md mb-8">
+      
   <h1 className="text-2xl font-extrabold text-white">راهنمای جامع پرستاری</h1>
   <div className="flex gap-4 items-center">
     <button
-      className="text-white text-xl border border-white px-3 py-1 rounded hover:bg-white hover:text-blue-600 transition"
+      className="text-white  text-xl border border-white px-3 py-1 rounded hover:bg-white hover:text-blue-600 transition"
       onClick={handleLogout}
     >
       خروج
@@ -41,6 +42,7 @@ const handleLogout = () => {
     >
       <FaBars />
     </button>
+    
   </div>
 </div>
 
@@ -72,7 +74,7 @@ const handleLogout = () => {
             </Link>
           </div>
          
-          {/* <div className="flex items-center">
+          <div className="flex items-center">
             <FaHeart size={20} className="text-[#4A90E2] ml-2" />
             <Link className="text-[#366EBD] font-bold" to="/rhythm">
               نوار قلب
@@ -83,7 +85,7 @@ const handleLogout = () => {
             <Link className="text-[#366EBD] font-bold" to="/ecg-calculator">
                محاسبه ضربان قلب
             </Link>
-          </div> */}
+          </div>
         </div>
         
       )}

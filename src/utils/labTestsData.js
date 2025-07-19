@@ -609,6 +609,22 @@ const labTestsData = [
     tubeType: "5cc خون لخته   /   P.ANCA  /  ANCA  /  C.ANCA  /  Anti RP3  /  Anti ds DNA   /  Anti MPO  /  ANA(I.F)",
     normalRange: "",
   },
+    {
+    testName:"Galactomannan",
+    tubeType: "cbcروی یخ",
+    normalRange: "",
+  },
+    {
+    testName:"HLA ABC(IGRA)",
+    tubeType: "لوله DHR",
+    normalRange: "",
+  },
+    {
+    testName:"Topiramate",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+
  
  
  

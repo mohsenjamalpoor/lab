@@ -6,7 +6,7 @@ export const rhythms = [
     type: "نرمال",
     description: "ریتم طبیعی با موج P و فاصله PR نرمال.",
     bpmRange: "60-100",
-    image: "/images/sinus.png",
+    image: "/images/sinus.png.jpg",
   },
   {
     id: "sinus-bradycardia",
@@ -14,7 +14,7 @@ export const rhythms = [
     type: "نرمال",
     description: "ضربان کمتر از 60 در دقیقه.",
     bpmRange: "<60",
-    image: "/images/sinus-bradycardia.png",
+    image: "/images/sinus-bradycardia.png.jpg",
   },
   {
     id: "sinus-tachycardia",
@@ -22,7 +22,7 @@ export const rhythms = [
     type: "نرمال",
     description: "ضربان بیش از 100 در دقیقه.",
     bpmRange: ">100",
-    image: "/images/sinus-tachycardia.png",
+    image: "/images/sinus-tachycardia.png.jpg",
   },
   {
     id: "sinus-arrhythmia",

@@ -22,9 +22,9 @@ function App() {
         <Route path="nursingdiagnosis" element={<NursingDiagnosis />} />
         <Route path="drip" element={<DripCalculator />} />
         <Route path="/dw-serum" element={<DWSerumCalculator />} />
-          {/* <Route path="/rhythm" element={<RhythmHome />} />
+          <Route path="/rhythm" element={<RhythmHome />} />
         <Route path="/rhythm/:id" element={<RhythmPage />} />
-        <Route path="/ecg-calculator" element={<ECGCalculator />} /> */}
+        <Route path="/ecg-calculator" element={<ECGCalculator />} />
       </Routes>
     </BrowserRouter>
   );

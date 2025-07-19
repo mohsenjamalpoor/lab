@@ -20,7 +20,7 @@ export default function LoginPage() {
     const validCodes = ["1870105321", "1111111111"];
 
     if (validCodes.includes(nationalCode)) {
-      // ذخیره در localStorage
+   
       localStorage.setItem("loggedIn", "true");
       navigate("/home");
     } else {
