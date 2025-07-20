@@ -3,7 +3,7 @@ import labTestsData from "../utils/labTestsData";
 import { IoChevronBackCircle } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
-export default function LabSearchApp() {
+export default function TestsPage() {
   const navigator = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
 
