@@ -25,18 +25,36 @@ export default function HomePage() {
 
   const navItems = [
     { to: "/lab", icon: <FaFlask size={24} />, label: "آزمایشات" },
-    { to: "/nursingdiagnosis", icon: <FaClipboardList size={24} />, label: "تشخیص‌های پرستاری" },
+    {
+      to: "/nursingdiagnosis",
+      icon: <FaClipboardList size={24} />,
+      label: "تشخیص‌های پرستاری",
+    },
     { to: "/drip", icon: <FaNotesMedical size={24} />, label: "محاسبه دریپ" },
-    { to: "/dw-serum", icon: <FaSyringe size={24} />, label: "محاسبه سرم قندی" },
+    {
+      to: "/dw-serum",
+      icon: <FaSyringe size={24} />,
+      label: "محاسبه سرم قندی",
+    },
     { to: "/rhythm", icon: <FaHeart size={24} />, label: "نوار قلب" },
-    { to: "/ecg-calculator", icon: <FaHeart size={24} />, label: "محاسبه ضربان قلب" },
+    {
+      to: "/ecg-calculator",
+      icon: <FaHeart size={24} />,
+      label: "محاسبه ضربان قلب",
+    },
+    {
+      to: "/surgery",
+      icon: <FaClipboardList size={24} />,
+      label: "بخش جراحی",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gray-50 p-4">
-     
       <div className="flex justify-between items-center bg-gradient-to-r from-blue-600 to-cyan-400 p-4 rounded-xl shadow-md mb-8">
-        <h1 className="text-2xl font-extrabold text-white">راهنمای جامع پرستاری</h1>
+        <h1 className="text-2xl font-extrabold text-white">
+          راهنمای جامع پرستاری
+        </h1>
         <button
           className="text-white text-xl border border-white px-3 py-1 rounded hover:bg-white hover:text-blue-600 transition"
           onClick={handleLogout}
@@ -45,7 +63,6 @@ export default function HomePage() {
         </button>
       </div>
 
-      
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {navItems.map((item, index) => (
           <Link

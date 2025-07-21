@@ -11,6 +11,12 @@ import LoginPage from "./LoginPage";
 import LabPage from "./components/LabPage";
 import BloodProductsPage from "./components/BloodProductsPage";
 import TestsPage from "./components/TestsPage";
+import SurgeryPage from "./components/SurgeryPage";
+import DrainsPage from "./pages/DrainsPage";
+
+import PostOpCarePage from "./pages/PostOpCarePage";
+
+
 
 
 
@@ -32,6 +38,9 @@ function App() {
           <Route path="/rhythm" element={<RhythmHome />} />
         <Route path="/rhythm/:id" element={<RhythmPage />} />
         <Route path="/ecg-calculator" element={<ECGCalculator />} />
+        <Route path="/surgery" element={<SurgeryPage />} />
+        <Route path="/surgery/drains" element={<DrainsPage />} />
+<Route path="/surgery/post-op-care" element={<PostOpCarePage />} />
         
       </Routes>
     </BrowserRouter>
