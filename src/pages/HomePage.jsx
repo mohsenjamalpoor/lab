@@ -47,6 +47,7 @@ export default function HomePage() {
       icon: <FaClipboardList size={24} />,
       label: "بخش جراحی",
     },
+    
   ];
 
   return (

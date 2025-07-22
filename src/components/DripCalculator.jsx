@@ -9,9 +9,13 @@ const drugOptions = [
   { name: "مانیتول", value: "mannitol" },
   { name: "انسولین", value: "insulin" },
   { name: "NaCl 3%", value: "nacl3" },
+  { name: "میدازولام", value: "midazolam" },
+
 ];
 
 export default function DripCalculator() {
+  const [midazolamAgeGroup, setMidazolamAgeGroup] = useState("adult");
+
   const navigate = useNavigate();
   const [drugType, setDrugType] = useState("");
   const [totalVolume, setTotalVolume] = useState("");
@@ -93,6 +97,21 @@ export default function DripCalculator() {
         return "روش محاسبه نامعتبر است.";
       }
     },
+    midazolam: () => {
+  if (midazolamAgeGroup === "child") {
+    const weight = parseFloat(weightKg);
+    if (!weight || weight <= 0) return "وزن معتبر وارد کنید.";
+    const dose = weight * 3;
+    return `دوز کل: ${formatRate(dose)} mg\nدر 50cc رقیق می‌شود.\nبا سرعت پایه 5ml/hr شروع می‌کنیم و در صورت نیاز افزایش می‌یابد.`;
+  } else {
+    // مانند داروی عمومی
+    const rate =
+      (parseFloat(totalVolume) * parseFloat(doctorOrder)) /
+      parseFloat(totalMedical);
+    return `سرعت انفوزیون میدازولام: ${formatRate(rate)} ml/hr`;
+  }
+},
+
   };
 
   const calculateDripRate = () => {
@@ -105,7 +124,13 @@ export default function DripCalculator() {
       (drugType === "mannitol" && !doctorOrder) ||
       (drugType === "insulin" &&
         (!weightKg || !totalVolume || !totalMedical)) ||
+        (drugType === "midazolam" &&
+  ((midazolamAgeGroup === "child" && !weightKg) ||
+   (midazolamAgeGroup === "adult" &&
+    (!totalVolume || !totalMedical || !doctorOrder))))||
+
       (drugType === "nacl3" && !totalVolume);
+      
 
     if (commonMissing) {
       setResult("لطفا تمام فیلدها را کامل کنید.");
@@ -189,6 +214,34 @@ export default function DripCalculator() {
           <Input label="حجم محلول (ml):" value={totalVolume} onChange={setTotalVolume} />
         </>
       )}
+      {drugType === "midazolam" && (
+  <>
+    <Select
+      label="سن بیمار:"
+      options={[
+        { label: "بزرگسال", value: "adult" },
+        { label: "اطفال", value: "child" },
+      ]}
+      value={midazolamAgeGroup}
+      onChange={setMidazolamAgeGroup}
+    />
+
+    {midazolamAgeGroup === "child" ? (
+      <Input
+        label="وزن بیمار (kg):"
+        value={weightKg}
+        onChange={setWeightKg}
+      />
+    ) : (
+      <>
+        <Input label="حجم محلول (ml):" value={totalVolume} onChange={setTotalVolume} />
+        <Input label="کل دارو (mg):" value={totalMedical} onChange={setTotalMedical} />
+        <Input label="دستور پزشک (mg):" value={doctorOrder} onChange={setDoctorOrder} />
+      </>
+    )}
+  </>
+)}
+
 
       {drugType === "nacl3" && (
         <>
