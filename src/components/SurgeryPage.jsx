@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function SurgeryPage() {
   const items = [
-    { label: "انواع درن", to: "/surgery/drains" },
+    { label: "انواع درن ها" , to: "/surgery/drains" },
     { label: "مراقبت بعد از جراحی", to: "/surgery/post-op-care" },
   ];
 

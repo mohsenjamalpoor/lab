@@ -16,6 +16,8 @@ import DrainsPage from "./pages/DrainsPage";
 
 import PostOpCarePage from "./pages/PostOpCarePage";
 
+import DrainDetailPage from "./components/DrainDetailPage";
+
 
 
 
@@ -40,6 +42,8 @@ function App() {
         <Route path="/ecg-calculator" element={<ECGCalculator />} />
         <Route path="/surgery" element={<SurgeryPage />} />
         <Route path="/surgery/drains" element={<DrainsPage />} />
+          <Route path="/surgery/drains/:id" element={<DrainDetailPage />} />
+
 <Route path="/surgery/post-op-care" element={<PostOpCarePage />} />
 
         

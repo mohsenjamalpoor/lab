@@ -45,7 +45,7 @@ export default function HomePage() {
     {
       to: "/surgery",
       icon: <FaClipboardList size={24} />,
-      label: "بخش جراحی",
+      label: " جراحی",
     },
     
   ];
