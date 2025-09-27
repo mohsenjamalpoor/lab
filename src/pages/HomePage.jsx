@@ -6,6 +6,7 @@ import {
   FaSyringe,
   FaNotesMedical,
   FaHeart,
+  FaBookMedical 
 } from "react-icons/fa";
 
 export default function HomePage() {
@@ -39,7 +40,7 @@ export default function HomePage() {
     { to: "/rhythm", icon: <FaHeart size={24} />, label: "نوار قلب" },
     {
       to: "/educationalNeeds",
-     
+      icon: <FaBookMedical size={24} />, 
       label: "نیاز های آموزشی بیماران",
     },
     {
@@ -47,7 +48,6 @@ export default function HomePage() {
       icon: <FaClipboardList size={24} />,
       label: " جراحی",
     },
-    
   ];
 
   return (
