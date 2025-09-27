@@ -6,7 +6,7 @@ import DripCalculator from "./components/DripCalculator";
 import DWSerumCalculator from "./components/DWSerumCalculator";
 import RhythmPage from "./components/RhythmPage";
 import RhythmHome from "./components/heart/RhythmHome";
-import ECGCalculator from "./components/heart/ECGCalculator";
+
 import LoginPage from "./LoginPage";
 import LabPage from "./components/LabPage";
 import BloodProductsPage from "./components/BloodProductsPage";
@@ -17,6 +17,8 @@ import DrainsPage from "./pages/DrainsPage";
 import PostOpCarePage from "./pages/PostOpCarePage";
 
 import DrainDetailPage from "./components/DrainDetailPage";
+import PatientEducation from "./components/EducationalNeeds";
+import EducationalNeeds from "./components/EducationalNeeds";
 
 
 
@@ -39,7 +41,7 @@ function App() {
         <Route path="/dw-serum" element={<DWSerumCalculator />} />
           <Route path="/rhythm" element={<RhythmHome />} />
         <Route path="/rhythm/:id" element={<RhythmPage />} />
-        <Route path="/ecg-calculator" element={<ECGCalculator />} />
+        <Route path="/educationalNeeds" element={<EducationalNeeds />} />
         <Route path="/surgery" element={<SurgeryPage />} />
         <Route path="/surgery/drains" element={<DrainsPage />} />
           <Route path="/surgery/drains/:id" element={<DrainDetailPage />} />

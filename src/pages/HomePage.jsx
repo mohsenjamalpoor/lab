@@ -38,9 +38,9 @@ export default function HomePage() {
     },
     { to: "/rhythm", icon: <FaHeart size={24} />, label: "نوار قلب" },
     {
-      to: "/ecg-calculator",
-      icon: <FaHeart size={24} />,
-      label: "محاسبه ضربان قلب",
+      to: "/educationalNeeds",
+     
+      label: "نیاز های آموزشی بیماران",
     },
     {
       to: "/surgery",
