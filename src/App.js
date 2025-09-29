@@ -17,7 +17,7 @@ import DrainsPage from "./pages/DrainsPage";
 import PostOpCarePage from "./pages/PostOpCarePage";
 
 import DrainDetailPage from "./components/DrainDetailPage";
-import PatientEducation from "./components/EducationalNeeds";
+
 import EducationalNeeds from "./components/EducationalNeeds";
 
 
