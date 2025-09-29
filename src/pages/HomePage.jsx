@@ -7,9 +7,6 @@ import {
   FaNotesMedical,
   FaHeart,
   FaBookMedical,
-  FaBaby,
-  FaPills,
-  FaLungs,
   FaUserMd
 } from "react-icons/fa";
 
