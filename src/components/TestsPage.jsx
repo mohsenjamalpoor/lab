@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import labTestsData from "../utils/labTestsData";
-import { IoChevronBackCircle } from "react-icons/io5";
+
 import { useNavigate } from "react-router-dom";
 import { FaArrowRight, FaSearch, FaVial } from "react-icons/fa";
 
