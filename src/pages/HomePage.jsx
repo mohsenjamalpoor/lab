@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import {
   FaFlask,
   FaClipboardList,
@@ -11,20 +11,6 @@ import {
 } from "react-icons/fa";
 
 export default function HomePage() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("loggedIn");
-    if (!isLoggedIn) {
-      navigate("/login");
-    }
-  }, []);
-
-  const handleLogout = () => {
-    localStorage.removeItem("loggedIn");
-    navigate("/login");
-  };
-
   const navItems = [
     { 
       to: "/lab", 
@@ -75,8 +61,6 @@ export default function HomePage() {
       description: "مراقبت‌های پس از جراحی",
       color: "from-teal-500 to-green-600"
     },
-   
-  
   ];
 
   return (
@@ -97,12 +81,6 @@ export default function HomePage() {
                 <p className="text-gray-600 mt-1">ابزارهای کاربردی برای پرستاران و مراقبین سلامت</p>
               </div>
             </div>
-            <button
-              className="text-blue-600 border border-blue-600 px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors font-medium"
-              onClick={handleLogout}
-            >
-              خروج
-            </button>
           </div>
         </div>
 
