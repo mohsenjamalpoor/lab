@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IoChevronBackCircle } from "react-icons/io5";
+
 import { useNavigate } from "react-router-dom";
 import { FaArrowRight, FaSyringe, FaExclamationTriangle } from "react-icons/fa";
 
