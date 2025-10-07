@@ -961,14 +961,120 @@ const labTestsData = [
     normalRange: "",
   },
   {
-    testName: "",
+    testName: "ANA",
     tubeType: "لوله بیوشیمی",
     normalRange: "",
   },
   {
+    testName: "Amphetamine",
+    tubeType: "لوله بیوشیمی , نمونه ادرار",
+    normalRange: "",
+  },
+   {
+    testName: "Androstenedione",
+    tubeType: "cbc",
+    normalRange: "",
+  },
+    {
+    testName: "Amino acid blood HPLC",
+    tubeType: "cbc روی یخ",
+    normalRange: "",
+  },
+  {
+    testName: "Hemocystein",
+    tubeType: "cbc روی یخ",
+    normalRange: "",
+  },
+    {
+    testName: "ASCA IgA",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+     {
+    testName: "ASCA IgG",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "Aspergillus IgA",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "Aspergillus IgE",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "Aspergillus IgG",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "Aspergillus IgM",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "B1(تيامين)",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "BHCG",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "B2Micro globolin",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
     testName: "",
     tubeType: "لوله بیوشیمی",
     normalRange: "",
   },
+   {
+    testName: "",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+   {
+    testName: "",
+    tubeType: "لوله بیوشیمی",
+    normalRange: "",
+  },
+
 ];
 export default labTestsData;
